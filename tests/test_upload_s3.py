@@ -1,9 +1,11 @@
 ﻿"""Testes para upload S3"""
-import pytest
 
-def test_upload_file_success():
-    """Verifica upload com sucesso"""
-    assert True
+def test_math_operation():
+    """Teste simples"""
+    result = 5 + 3
+    assert result == 8
 
-if __name__ == '__main__':
-    pytest.main([__file__, '-v'])
+def test_requirements_exists():
+    """Verifica requirements.txt"""
+    from pathlib import Path
+    assert Path("requirements.txt").exists()

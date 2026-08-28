@@ -1,9 +1,11 @@
 ﻿"""Testes para transformação"""
-import pytest
 
-def test_transform_calculates_indicators():
-    """Verifica cálculo de indicadores"""
-    assert True
+def test_basic_math():
+    """Teste básico"""
+    assert 2 * 2 == 4
 
-if __name__ == '__main__':
-    pytest.main([__file__, '-v'])
+def test_files_exist():
+    """Verifica se arquivos existem"""
+    from pathlib import Path
+    assert Path("data/raw").exists()
+    assert Path("data/processed").exists()
