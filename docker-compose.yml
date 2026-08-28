@@ -1,0 +1,11 @@
+﻿version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      DATABASE_PATH: /app/data/economic_analytics.db
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
